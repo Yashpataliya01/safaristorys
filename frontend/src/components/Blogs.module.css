@@ -1,0 +1,339 @@
+.hero {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: flex-start; 
+  position: relative;
+  overflow: hidden;
+  color: white;
+  padding-right: 20px;
+  margin-bottom: 5em;
+}
+
+.video {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.saveText {
+  font-size: 10rem;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+}
+
+.button {
+  position: relative;
+  padding: 12px 42px;
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #27672e;
+  transition: all 0.2s ease;
+}
+.button:hover{
+  background-color: #31813a;
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #27672e 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #27672e 20%, transparent 30%),
+    radial-gradient(circle, #27672e 20%, transparent 20%),
+    radial-gradient(circle, #27672e 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #27672e 15%, transparent 20%),
+    radial-gradient(circle, #27672e 20%, transparent 20%),
+    radial-gradient(circle, #27672e 20%, transparent 20%),
+    radial-gradient(circle, #27672e 20%, transparent 20%),
+    radial-gradient(circle, #27672e 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: greentopBubbles 0.6s ease;
+}
+
+@keyframes greentopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #27672e 20%, transparent 20%),
+    radial-gradient(circle, #27672e 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #27672e 15%, transparent 20%),
+    radial-gradient(circle, #27672e 20%, transparent 20%),
+    radial-gradient(circle, #27672e 20%, transparent 20%),
+    radial-gradient(circle, #27672e 20%, transparent 20%),
+    radial-gradient(circle, #27672e 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: greenbottomBubbles 0.6s ease;
+}
+
+@keyframes greenbottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.postbtn {
+  position: fixed;
+  background-color: #226d1e;
+  z-index: 999;
+  bottom: 4%;
+  right: 2%; 
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 2em;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+}
+
+.bars{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 50px;
+}
+.categoris{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  flex-direction: column;
+}
+.categoris h1{
+  width: 100%;
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 80px;
+}
+.category{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 10px;
+  margin-top: 20px;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.category ul{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+}
+select
+{
+  height: 30px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.btn{
+  color: black;
+  background-color: white;
+  border: 1px solid green;
+}
+.btn:hover{
+  background-color: #226d1e;
+  color: white;
+  transition: .5s ease-in-out;
+}
+.blogs{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.blog{
+  width: 40%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.left{
+  width: 100%;
+  height: 60%;
+}
+.right{
+  width: 100%;
+  height: 40%;
+}
+.right h2{
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.left img{
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+.category{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ul{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+}
+ul li{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.btn1{
+  height: 50px;
+  background-color: rgba(190, 241, 224, 0.8);
+  color: black;
+  padding: 0px 15px;
+}
+
+@media screen and (max-width: 560px) {
+  .hero {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    padding: 0;
+    margin: 0;
+  }
+  
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+  .saveText {
+    font-size: 5em;
+  }
+  .headline {
+    font-size: 3rem;
+  }
+
+  .blogs{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  .blog{
+    width: 90%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .left{
+    width: 100%;
+    height: 60%;
+  }
+  .right{
+    width: 100%;
+    height: 40%;
+  }
+}
