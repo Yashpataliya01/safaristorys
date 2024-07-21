@@ -15,7 +15,8 @@
   background-color: #f8f8f8;
   flex-direction: column;
 }
-.newspart{
+
+.newspart {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -37,6 +38,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background-color: rgb(255, 255, 255);
+  height: 60vh;
 }
 
 .news:hover {
@@ -63,7 +65,8 @@
   padding: 20px;
   background-color: rgb(255, 255, 255);
 }
-.right h1{
+
+.right h1 {
   color: #000000;
 }
 
@@ -105,7 +108,8 @@
   justify-content: space-between;
 }
 
-.leftcont, .rightcont {
+.leftcont,
+.rightcont {
   width: 50%;
   height: 100%;
   display: flex;
@@ -113,12 +117,13 @@
   justify-content: center;
 }
 
-.quotes{
+.quotes {
   font-family: "Rubik Glitch Pop", system-ui;
   font-size: 50px;
   color: #226d1e;
 }
-.leftcont .quot{
+
+.leftcont .quot {
   width: 100%;
   text-align: center;
   color: #13791d;
@@ -142,10 +147,11 @@
 
 .image {
   width: 100%;
-  
+
   height: auto;
   transition: opacity 0.5s ease-in-out;
 }
+
 .slider {
   position: relative;
   width: 80%;
@@ -171,13 +177,15 @@
   .news {
     width: 45%;
   }
-  .books{
+
+  .books {
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
   .container {
     width: 100%;
     height: 100%;
@@ -186,25 +194,28 @@
     justify-content: space-between;
     flex-direction: column;
   }
-  .leftcont, .rightcont {
+
+  .leftcont,
+  .rightcont {
     width: 100vw;
     height: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-  } 
-  .leftcont .comma{
+  }
+
+  .leftcont .comma {
     position: absolute;
     width: 100%;
     height: 100vh;
   }
-  
-  .leftcont .quot{
+
+  .leftcont .quot {
     width: 50%;
     text-align: center;
     font-size: 1.1em;
   }
-  
+
   .slider {
     position: relative;
     width: 80%;
@@ -217,12 +228,13 @@
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
   .image {
     width: 100%;
     height: auto;
     transition: opacity 0.5s ease-in-out;
   }
+
   .slider {
     position: relative;
     width: 80%;
@@ -235,7 +247,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
-  
+
   .image {
     width: 100%;
     height: auto;
@@ -243,7 +255,7 @@
     background-size: cover;
     height: 100%;
   }
-  
+
   .dots {
     position: absolute;
     bottom: 0;
@@ -251,7 +263,7 @@
     justify-content: center;
     width: 100%;
   }
-  
+
   .dot {
     height: 18px;
     width: 18px;
@@ -261,9 +273,9 @@
     display: inline-block;
     transition: background-color 0.3s ease;
     cursor: pointer;
-    
+
   }
-  
+
   .activeDot {
     background-color: #226d1e;
   }

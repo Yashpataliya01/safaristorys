@@ -63,3 +63,12 @@ export const signout = async (req, res, next) => {
   res.cookie('token', '');
   return res.status(200).json({ message: "Logout successful" });
 }
+
+export const getuser = async (req, res, next) => {
+  try {
+    const userdetails = await User.findOne({ email: req.user.email });
+    res.status(200).json({ data: userdetails });
+  } catch (error) {
+    console.log(error);
+  }
+}

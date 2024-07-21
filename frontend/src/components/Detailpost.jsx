@@ -33,39 +33,44 @@ function Detailpost() {
             <div className={styles.links}>
               <h3 className={styles.category}>{category}</h3>
               <div className={styles.icons}>
-                <Link
-                  to="https://api.whatsapp.com/send?phone=whatsappphonenumber&text=urlencodedtext"
+                <a
+                  href={`https://api.whatsapp.com/send?phone=whatsappphonenumber&text=${encodeURIComponent(
+                    title
+                  )}`}
                   target="_blank"
-                  query={{ test: title }}
+                  rel="noopener noreferrer"
                 >
-                  <img src={img} alt="" className={styles.icon} />
-                </Link>
-                <Link
-                  to="https://github.com/new"
+                  <img src={img} alt="WhatsApp" className={styles.icon} />
+                </a>
+                <a
+                  href="https://github.com/new"
                   target="_blank"
-                  query={{ test: title }}
+                  rel="noopener noreferrer"
                 >
-                  <img src={img1} alt="" className={styles.icon1} />
-                </Link>
-                <Link
-                  to="https://www.instagram.com/"
+                  <img src={img1} alt="GitHub" className={styles.icon1} />
+                </a>
+                <a
+                  href="https://www.instagram.com/"
                   target="_blank"
-                  query={{ test: title }}
+                  rel="noopener noreferrer"
                 >
-                  <img src={img2} alt="" className={styles.icon2} />
-                </Link>
-                <Link
-                  to="https://mail.google.com/mail/u/0/#inbox?compose=new"
+                  <img src={img2} alt="Instagram" className={styles.icon2} />
+                </a>
+                <a
+                  href="https://mail.google.com/mail/u/0/#inbox?compose=new"
                   target="_blank"
-                  query={{ test: title }}
+                  rel="noopener noreferrer"
                 >
-                  <img src={img3} alt="" className={styles.icon1} />
-                </Link>
+                  <img src={img3} alt="Gmail" className={styles.icon1} />
+                </a>
               </div>
             </div>
             <h1 className={styles.title}>{title}</h1>
             <h5 className={styles.user}>By - {user}</h5>
             <article className={styles.discription}>{discription}</article>
+            <Link to="/blogs">
+              <button className={styles.return}>←</button>
+            </Link>
           </div>
         </div>
       </div>

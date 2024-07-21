@@ -104,8 +104,8 @@ function Homeblog() {
                   >
                     <div className={styles.blogcard} key={post.title}>
                       <h2>
-                        {post.title.length > 50
-                          ? post.title.slice(0, 50)
+                        {post.title.length > 20
+                          ? post.title.slice(0, 20)
                           : post.title}
                       </h2>
                       <p>

@@ -26,7 +26,7 @@ function Topnews() {
   //     }
   //   };
 
-  //   getNews();
+  //   getNews();s
   // }, []);
 
   const images = [
@@ -83,14 +83,13 @@ function Topnews() {
                 />
               </div>
               <div className={styles.right}>
-                0
                 <h1>
                   {news.title.length > 50
                     ? news.title.slice(0, 50)
                     : news.title}
                 </h1>
                 <h2>
-                  {news.description.length > 100
+                  {news.description && news.description.length > 100
                     ? news.description.slice(0, 100)
                     : news.description}
                 </h2>

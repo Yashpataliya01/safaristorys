@@ -100,22 +100,10 @@ const Createpost = () => {
       toast.success(result.message);
       navigate("/blogs");
     } catch (error) {
-      console.error("Error during post creation:", error);
       toast.error(`Error: ${error.message}`);
     } finally {
       setIsSubmitting(false);
     }
-  };
-
-  // Function to check if the form is valid
-  const isFormValid = () => {
-    const { title, discription, category, image } = formData;
-    return (
-      title.trim().length > 0 &&
-      discription.trim().length >= 100 &&
-      category.trim().length > 0 &&
-      image !== null
-    );
   };
 
   return (
@@ -140,6 +128,8 @@ const Createpost = () => {
               value={formData.title}
               onChange={handleChange}
               required
+              minLength={10}
+              maxLength={60}
             />
           </div>
           <div className={styles.formGroup}>
@@ -165,6 +155,7 @@ const Createpost = () => {
               value={formData.discription}
               onChange={handleChange}
               required
+              minLength={100}
             ></textarea>
           </div>
           <div className={styles.formGroup}>
@@ -195,11 +186,7 @@ const Createpost = () => {
               />
             )}
           </div>
-          <button
-            type="submit"
-            className={styles.submitButton}
-            disabled={isUploading || isSubmitting || !isFormValid()}
-          >
+          <button type="submit" className={styles.submitButton}>
             {isSubmitting ? "Creating Post..." : "Create Post"}
           </button>
         </form>

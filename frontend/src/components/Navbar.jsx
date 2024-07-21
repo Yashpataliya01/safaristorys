@@ -49,8 +49,8 @@ function Navbar() {
         <Link to="/about" onClick={closeMenu}>
           <h3>About</h3>
         </Link>
-        <Link to="/signin" onClick={closeMenu}>
-          <h3>Work</h3>
+        <Link to="/profile" onClick={closeMenu}>
+          <h3>Profile</h3>
         </Link>
         <Link to="/signin" onClick={closeMenu}>
           <h3>News</h3>

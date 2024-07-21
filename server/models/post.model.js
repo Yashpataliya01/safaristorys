@@ -13,7 +13,7 @@ const postschema = new mongoose.Schema({
     ref: "user"
   }],
   image: String
-})
+},{ timestamps: true });
 
 const Post = mongoose.model("Post", postschema)
 

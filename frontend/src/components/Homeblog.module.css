@@ -2,7 +2,6 @@
   background-image: url("https://images.unsplash.com/photo-1470165473874-023613603389?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   width: 100vw;
-  height: 100vh;
   background-position: bottom;
 }
 .blog{
@@ -12,6 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
 }
 .blogcontant .hh1{
   font-family: "Rubik Glitch Pop", system-ui;
@@ -69,14 +69,14 @@ button{
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 50px;
 }
 .blogcard{
   background-color: rgba(202, 198, 198, 0.5);
-  width: 40%;
+  max-width: 40VW;
   height: 20vh;
   padding: 10px;
   border-radius: 10px;
@@ -84,7 +84,24 @@ button{
 .error{
   margin-top: 6.5em;
 }
-
+@media screen and (max-width: 1100px) {
+  .card1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .blogcard{
+    background-color: rgba(202, 198, 198, 0.5);
+    max-width: 40VW;
+    height: 25vh;
+    padding: 10px;
+    border-radius: 10px;
+  }
+}
 @media screen and (max-width: 855px) {
   .category1{
     width: 100%;
@@ -128,6 +145,7 @@ button{
   p{
     font-size: small;
   }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -164,21 +182,20 @@ button{
     scrollbar-width: none;
     scroll-behavior: smooth;
   }
-
   .card1{
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 50px;
   }
   .blogcard{
     background-color: rgba(202, 198, 198, 0.5);
-    width: 90%;
-    height: 20vh;
+    max-width: 100VW;
+    height: 25vh;
     padding: 10px;
-    border-radius: 10px;  
+    border-radius: 10px;
   }
-  
 }

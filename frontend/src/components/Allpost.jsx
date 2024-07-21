@@ -17,10 +17,10 @@ function Allpost() {
           const errorData = await response.json();
           throw new Error(errorData.message || "Failed to get Blogs");
         }
-
         const result = await response.json();
         if (result.data && result.data.length > 0) {
           setAllpost(result.data);
+          console.log(result.data);
         } else if (result.message) {
           setMessage(result.message);
         } else {

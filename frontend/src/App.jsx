@@ -12,6 +12,7 @@ import Createpost from "./components/Createpost";
 import Detailpost from "./components/Detailpost";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Profile from "./components/Profile";
 
 function App() {
   const locomotiveScroll = new LocomotiveScroll();
@@ -26,6 +27,7 @@ function App() {
         <Route path="/create" element={<Createpost />} />
         <Route path="/post/:title" element={<Detailpost />} />
         <Route path="/about" element={<About />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
